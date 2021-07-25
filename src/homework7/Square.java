@@ -1,4 +1,4 @@
-package Homework7;
+package homework7;
 
 public class Square extends Rectangle{
     @Override

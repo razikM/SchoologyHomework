@@ -1,4 +1,4 @@
-package Homework7;
+package homework7;
 
 public class Polygon extends Shape{
     @Override
