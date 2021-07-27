@@ -1,24 +1,16 @@
 package homework7;
 
 public class Main {
-    private Shape shape;
-
-
-    public Main(Shape shape){
-        this.shape = shape;
-    }
 
     public static void main(String[] args) {
-        Main main = new Main(new Polygon());
-//                    new Main(new Triangle());
-//                    new Main(new Circle());
-//                    new Main(new Quad());
-//                    new Main(new Rectangle());
-//                    new Main(new Square());
-        main.printName();
+        Main.printName(new Triangle());
+        Main.printName(new Circle());
+        Main.printName(new Quad());
+        Main.printName(new Rectangle());
+        Main.printName(new Square());
     }
 
-    public void printName(){
+    public static void printName(Shape shape) {
         System.out.println(shape.getName());
     }
 }

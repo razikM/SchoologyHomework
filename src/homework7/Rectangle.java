@@ -1,9 +1,9 @@
 package homework7;
 
-public class Rectangle extends Quad{
+public class Rectangle extends Quad {
 
     @Override
-    public String getName(){
+    public String getName() {
         return "Rectangle";
     }
 }
