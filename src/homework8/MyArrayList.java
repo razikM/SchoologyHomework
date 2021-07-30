@@ -7,12 +7,12 @@ public class MyArrayList<T> {
         data = (T[]) new Object[0];
     }
 
-    public boolean add(Object value){
+    public boolean add(T value){
         try {
             T[] result = (T[]) new Object[data.length + 1];
             System.arraycopy(data,0,result,0, data.length);
             data = result;
-            data[data.length - 1] = (T) value;
+            data[data.length - 1] = value;
             return true;
         } catch (ClassCastException ex){
             System.err.println("The element was not added to the array");

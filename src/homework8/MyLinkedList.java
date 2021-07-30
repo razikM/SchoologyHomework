@@ -1,20 +1,20 @@
 package homework8;
 
 public class MyLinkedList<T> {
-    private Node<T> head = null;
-    private Node<T> tail = null;
-    private int size = 0;
+    protected Node<T> head = null;
+    protected Node<T> tail = null;
+    protected int size = 0;
 
-    public boolean add(Object value){
+    public boolean add(T value){
         try{
             if(size == 0){
-                Node<T> temp = new Node<>((T) value, null,null);
+                Node<T> temp = new Node<>(value, null,null);
                 head = temp;
                 tail = temp;
                 size++;
                 return true;
             }
-            Node<T> temp = new Node<>((T) value, null,tail);
+            Node<T> temp = new Node<>(value, null,tail);
             tail.next = temp;
             tail = temp;
             size++;
@@ -78,18 +78,6 @@ public class MyLinkedList<T> {
         }
 
         return result.data;
-    }
-
-    private class Node<T>{
-        private T data;
-        private Node<T> next;
-        private Node<T> prev;
-
-        Node(T data, Node<T> next, Node<T> prev){
-            this.data = data;
-            this.next = next;
-            this.prev = prev;
-        }
     }
 
     @Override
